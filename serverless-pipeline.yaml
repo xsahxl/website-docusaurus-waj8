@@ -5,6 +5,6 @@ steps:
   - run: echo ${{secrets.ALIYUN_AK}}
   - run: echo ${{secrets.ALIYUN_SK}}
   - run: >-
-      s config add  --AccessKeyID ${{secrets.ALIYUN_AK}}  --AccessKeySecret
+      s config add --AccountID ${{secrets.AccountID}}   --AccessKeyID ${{secrets.ALIYUN_AK}}  --AccessKeySecret
       ${{secrets.ALIYUN_SK}} -a default -f
-  - run: s deploy --use-local -y
+#   - run: s deploy --use-local -y
